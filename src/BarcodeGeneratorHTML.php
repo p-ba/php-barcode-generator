@@ -1,6 +1,6 @@
 <?php
 
-namespace Picqer\Barcode;
+namespace PBA\Barcode;
 
 class BarcodeGeneratorHTML extends BarcodeGenerator
 {

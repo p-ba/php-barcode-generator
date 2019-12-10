@@ -1,5 +1,5 @@
 <?php
 
-namespace Picqer\Barcode\Exceptions;
+namespace PBA\Barcode\Exceptions;
 
 class InvalidFormatException extends BarcodeException {}

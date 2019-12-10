@@ -1,8 +1,8 @@
 <?php
 
-namespace Picqer\Barcode;
+namespace PBA\Barcode;
 
-use Picqer\Barcode\Exceptions\BarcodeException;
+use PBA\Barcode\Exceptions\BarcodeException;
 
 class BarcodeGeneratorJPG extends BarcodeGenerator
 {

@@ -1,4 +1,7 @@
-# PHP Barcode Generator [![Build Status](https://travis-ci.org/picqer/php-barcode-generator.svg?branch=master)](https://travis-ci.org/picqer/php-barcode-generator) [![Total Downloads](https://poser.pugx.org/picqer/php-barcode-generator/downloads)](https://packagist.org/packages/picqer/php-barcode-generator)
+# PHP Barcode Generator [![Build Status](https://travis-ci.org/p-ba/php-barcode-generator.svg?branch=master)](https://travis-ci.org/picqer/php-barcode-generator) [![Total Downloads](https://poser.pugx.org/p-ba/php-barcode-generator/downloads)](https://packagist.org/packages/picqer/php-barcode-generator)
+
+*PHP 7.2+-ready Fork of [php-barcode-generator](https://github.com/picqer/php-barcode-generator)*
+
 This is an easy to use, non-bloated, framework independent, barcode generator in PHP.
 
 It creates SVG, PNG, JPG and HTML images, from the most used 1D barcode standards.
@@ -9,7 +12,7 @@ It creates SVG, PNG, JPG and HTML images, from the most used 1D barcode standard
 Install through [composer](https://getcomposer.org/doc/00-intro.md):
 
 ```
-composer require picqer/php-barcode-generator
+composer require p-ba/php-barcode-generator
 ```
 
 If you want to generate PNG or JPG images, you need the GD library or Imagick installed on your system as well.
@@ -18,7 +21,7 @@ If you want to generate PNG or JPG images, you need the GD library or Imagick in
 Initiate the barcode generator for the output you want, then call the ->getBarcode() routine as many times as you want.
 
 ```php
-$generator = new Picqer\Barcode\BarcodeGeneratorHTML();
+$generator = new PBA\Barcode\BarcodeGeneratorHTML();
 echo $generator->getBarcode('081231723897', $generator::TYPE_CODE_128);
 ```
 
@@ -31,10 +34,10 @@ The ->getBarcode() routine accepts the following:
 
 ## Image types
 ```php
-$generatorSVG = new Picqer\Barcode\BarcodeGeneratorSVG();
-$generatorPNG = new Picqer\Barcode\BarcodeGeneratorPNG();
-$generatorJPG = new Picqer\Barcode\BarcodeGeneratorJPG();
-$generatorHTML = new Picqer\Barcode\BarcodeGeneratorHTML();
+$generatorSVG = new PBA\Barcode\BarcodeGeneratorSVG();
+$generatorPNG = new PBA\Barcode\BarcodeGeneratorPNG();
+$generatorJPG = new PBA\Barcode\BarcodeGeneratorJPG();
+$generatorHTML = new PBA\Barcode\BarcodeGeneratorHTML();
 ```
 
 ## Accepted types
@@ -73,6 +76,6 @@ $generatorHTML = new Picqer\Barcode\BarcodeGeneratorHTML();
 Embedded PNG image in HTML:
 
 ```php
-$generator = new \Picqer\Barcode\BarcodeGeneratorPNG();
+$generator = new \PBA\Barcode\BarcodeGeneratorPNG();
 echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode('081231723897', $generator::TYPE_CODE_128)) . '">';
 ```
