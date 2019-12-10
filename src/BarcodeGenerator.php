@@ -1502,6 +1502,9 @@ abstract class BarcodeGenerator
         }
         $sum_b = 0;
         for ($i = 0; $i < $data_len; $i += 2) {
+            if (!is_numeric($code[$i])) {
+                throw new InvalidCharacterException(sprintf('Character #%s - %s is a non-numeric value', $i, $code[$i]));
+            }
             $sum_b += ($code[$i]);
         }
         if ($len < 13) {
