@@ -1,6 +1,6 @@
 # PHP Barcode Generator [![Build Status](https://travis-ci.org/p-ba/php-barcode-generator.svg?branch=master)](https://travis-ci.org/p-ba/php-barcode-generator) [![Total Downloads](https://poser.pugx.org/p-ba/php-barcode-generator/downloads)](https://packagist.org/packages/p-ba/php-barcode-generator)
 
-*PHP 7.2+-ready Fork of [php-barcode-generator](https://github.com/picqer/php-barcode-generator)*
+*PHP 7.3+-ready Fork of [php-barcode-generator](https://github.com/picqer/php-barcode-generator)*
 
 This is an easy to use, non-bloated, framework independent, barcode generator in PHP.
 
