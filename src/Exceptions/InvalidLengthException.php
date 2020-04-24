@@ -2,4 +2,6 @@
 
 namespace PBA\Barcode\Exceptions;
 
-class InvalidLengthException extends BarcodeException {}
+class InvalidLengthException extends BarcodeException
+{
+}

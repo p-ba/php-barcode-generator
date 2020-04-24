@@ -6,7 +6,6 @@ use PBA\Barcode\Exceptions\BarcodeException;
 
 class BarcodeGeneratorJPG extends BarcodeGenerator
 {
-
     /**
      * Return a JPG image representation of barcode (requires GD or Imagick library).
      *
@@ -19,7 +18,7 @@ class BarcodeGeneratorJPG extends BarcodeGenerator
      * @public
      * @throws BarcodeException
      */
-    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = array(0, 0, 0))
+    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = [0, 0, 0])
     {
         $barcodeData = $this->getBarcodeData($code, $type);
 
@@ -56,8 +55,14 @@ class BarcodeGeneratorJPG extends BarcodeGenerator
                 if ($imagick && isset($imageMagickObject)) {
                     $imageMagickObject->rectangle($positionHorizontal, $y, ($positionHorizontal + $bw), ($y + $bh));
                 } else {
-                    imagefilledrectangle($jpg, $positionHorizontal, $y, ($positionHorizontal + $bw) - 1, ($y + $bh),
-                        $colorForeground);
+                    imagefilledrectangle(
+                        $jpg,
+                        $positionHorizontal,
+                        $y,
+                        ($positionHorizontal + $bw) - 1,
+                        ($y + $bh),
+                        $colorForeground
+                    );
                 }
             }
             $positionHorizontal += $bw;

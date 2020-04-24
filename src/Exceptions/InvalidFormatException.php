@@ -2,4 +2,6 @@
 
 namespace PBA\Barcode\Exceptions;
 
-class InvalidFormatException extends BarcodeException {}
+class InvalidFormatException extends BarcodeException
+{
+}

@@ -4,7 +4,6 @@ namespace PBA\Barcode;
 
 class BarcodeGeneratorHTML extends BarcodeGenerator
 {
-
     /**
      * Return an HTML representation of barcode.
      *

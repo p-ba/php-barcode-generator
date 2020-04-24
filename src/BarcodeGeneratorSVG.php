@@ -4,7 +4,6 @@ namespace PBA\Barcode;
 
 class BarcodeGeneratorSVG extends BarcodeGenerator
 {
-
     /**
      * Return a SVG string representation of barcode.
      *
@@ -21,7 +20,7 @@ class BarcodeGeneratorSVG extends BarcodeGenerator
         $barcodeData = $this->getBarcodeData($code, $type);
 
         // replace table for special characters
-        $repstr = array("\0" => '', '&' => '&amp;', '<' => '&lt;', '>' => '&gt;');
+        $repstr = ["\0" => '', '&' => '&amp;', '<' => '&lt;', '>' => '&gt;'];
 
         $width = round(($barcodeData['maxWidth'] * $widthFactor), 3);
 
