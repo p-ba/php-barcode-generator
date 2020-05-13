@@ -32,5 +32,17 @@
         "psr-4": {
             "PBA\\Barcode\\": ["src", "tests"]
         }
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/php-cs-fixer fix --dry-run --verbose"
+        ],
+        "test": [
+            "./vendor/bin/phpunit"
+        ],
+        "build": [
+            "@lint",
+            "@test"
+        ]
     }
 }
